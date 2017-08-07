@@ -1,0 +1,59 @@
+##########################################################
+# Sample .htaccess file for using customized Error Pages #
+##########################################################
+#
+# To enable customized error pages, create the pages
+# that you would like to use and save them in your
+# etc/error-html directory.
+# Be sure to use the same file names that we have
+# used (for example: 404-not_found.html).
+#
+# Then, for each custom page that you will use, remove
+# the pound sign (#) from the beginning of the line below
+# that corresponds to that error page.
+# For example, to "turn on" the custom page for Error 404,
+# remove the pound sign from the line:
+# ErrorDocument 404 /error-html/404-not_found.html
+#
+# Once the pound sign(s) has/have been removed, save
+# this file in your site's home directory with the name
+# .htaccess  (period htaccess)
+
+# Prevent directory listings, allow SSI
+Options -Indexes +Includes
+
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+# Error documents
+ErrorDocument 400 /
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+
+Redirect permanent /about/ /
+Redirect permanent /about /
+
+Redirect permanent /business/ /
+Redirect permanent /business /
+
+Redirect permanent /contact/ /
+Redirect permanent /contact /
+
+Redirect permanent /services/ /
+Redirect permanent /services /
+
+Redirect permanent /success/ /
+Redirect permanent /success /
+
+Redirect permanent /technology/ /
+Redirect permanent /technology /

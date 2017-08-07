@@ -1,0 +1,760 @@
+// ---------- Variables ----------
+
+// Colours
+@colour-orange: #f68b1f;
+@colour-yellow: #fdcf09;
+@colour-green: #d2e280;
+@colour-white: #fff;
+@colour-near-white: #eee;
+@colour-pale-grey: #ddd;
+@colour-mid-grey: #999;
+@colour-dark-grey: #666;
+@colour-near-black: #333;
+@colour-black: #000;
+
+// Fonts
+@font-family-heading: Montserrat,Arial,Helvetica,sans-serif;
+@font-family-body: 'Open Sans',Arial,Helvetica,sans-serif;
+
+// Font sizes
+@font-size-giant: 35px;
+@font-size-h1: 28px;
+@font-size-h2: 20px;
+@font-size-h3: 18px;
+@font-size-masthead: 23px;
+@font-size-normal: 15px;
+@font-size-chunky-link: 13.5px;
+@font-size-small: 12px;
+
+// Font weights
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+// Line heights
+@line-height-normal: 1.6em;
+@line-height-compressed: 1.2em;
+
+// Margins
+@margin-half-unit: 5px;
+@margin-1-unit: 10px;
+@margin-2-units: 20px;
+@margin-3-units: 30px;
+@margin-4-unit: 40px;
+@margin-5-unit: 50px;
+@margin-6-unit: 60px;
+@margin-7-unit: 70px;
+
+// ---------- Mixins (append with () to prevent them appearing in the CSS at top level) ----------
+
+.mixin-header-section-and-nav() {
+  display: inline;
+  margin-bottom: @margin-1-unit;
+}
+
+.mixin-chunky-link() {
+  font-family: @font-family-heading;
+  font-weight: @font-weight-bold;
+	font-size: @font-size-chunky-link;
+  display: inline-block;
+  color: @colour-black;
+  text-decoration: none;
+  line-height: 1em;
+  text-transform: uppercase;
+  border: none;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+
+  &.nutshell {
+    background-color: @colour-orange;
+  }
+  &.services {
+    background-color: @colour-yellow;
+  }
+  &.meta {
+    background-color: @colour-green;
+  }
+
+  &:hover,
+  &:active {
+    color: @colour-white;
+    background-color: @colour-dark-grey !important;
+  }
+
+  &.current {
+    color: @colour-white;
+    background-color: @colour-near-black !important;
+    cursor: default;
+  }
+}
+
+.mixin-drop-shadow() {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+// ---------- Document ----------
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: @colour-white;
+	font-family: @font-family-body;
+	font-weight: @font-weight-normal;
+	font-size: @font-size-normal;
+	color: @colour-near-black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+
+// ---------- Grid layout ----------
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 @margin-1-unit;
+  max-width: 820px;
+  clear: both;
+}
+
+.row {
+  display: block;
+  clear: both;
+}
+
+
+// ---------- General styles ----------
+
+p,
+ul,
+ol {
+	line-height: @line-height-normal;
+	margin-bottom: 0.8em;
+}
+
+ul,
+ol {
+	margin-left: @margin-2-units;
+}
+
+ul {
+	list-style: circle;
+}
+
+li {
+	margin-left: @margin-2-units;
+	padding-left: @margin-1-unit;
+}
+
+strong, b {
+  font-weight: @font-weight-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.hidden,
+body.no-js .js-only {
+  display: none;
+}
+
+
+// ---------- Headings ----------
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-heading;
+  font-weight: @font-weight-bold;
+}
+
+
+// ---------- Masthead ----------
+
+#masthead {
+  height: 70px;
+  background-color: @colour-near-black;
+  color: @colour-mid-grey;
+  margin-bottom: @margin-half-unit;
+
+  .row {
+    height: 80px;
+		background: url(/images/logo.png) no-repeat 100% 35px;
+		background-size: 171px 22px;
+    padding-top: @margin-2-units;
+    font-size: @font-size-masthead;
+  }
+
+  small {
+    color: @colour-dark-grey;
+    font-size: 75%;
+    margin-left: 0.3em;
+  }
+}
+
+
+// ---------- Header ----------
+
+#header {
+	#title {
+		margin-top: -@margin-2-units;
+		margin-bottom: @margin-3-units;
+		height: 260px;
+		background: url(/images/header-bg.png) no-repeat top right;
+		background-size: 800px 260px;
+
+		h1 {
+			font-size: @font-size-h1;
+			padding-top: 90px;
+			line-height: @line-height-compressed;
+			text-shadow: 1px 1px 0 @colour-white;
+		}
+	}
+}
+
+
+// ---------- Menu ----------
+
+#menu {
+	text-align: left;
+
+  .section {
+    .mixin-header-section-and-nav;
+    float: left;
+    width: 20%;
+    margin-right: @margin-2-units;
+  }
+
+  h2 {
+    font-size: @font-size-h2;
+	  line-height: @line-height-normal;
+    border-top: 4px solid @colour-dark-grey;
+    margin: 0 0 @margin-1-unit 0;
+  }
+}
+
+#nav {
+  .mixin-header-section-and-nav;
+  float: right;
+  width: 25%;
+
+  p + p {
+    margin-top: @margin-1-unit;
+  }
+
+  a {
+    .mixin-chunky-link;
+    margin: 0 6px 8px 0;
+    padding: 7px;
+  }
+}
+
+
+// ---------- Content section ----------
+
+#content-section {
+  padding: 25px 0;
+  background: @colour-near-white url(/images/bg.png) repeat;
+  background-size: 20px 20px;
+  clear: both;
+
+  h2 {
+    font-size: @font-size-h1;
+	  line-height: @line-height-compressed;
+    text-shadow: 1px 1px 1px @colour-white;
+    margin: @margin-1-unit 0;
+
+    small {
+      font-size: @font-size-h2;
+      color: @colour-dark-grey;
+    }
+  }
+
+  h3 {
+    font-size: @font-size-h3;
+    text-shadow: 1px 1px 1px @colour-white;
+    margin: 0 0 0.2em 0;
+  }
+
+	p {
+		text-align: justify;
+	}
+
+  a {
+    color: @colour-near-black;
+    text-decoration: none;
+    border-bottom: 1px dotted @colour-dark-grey;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:active {
+      background-color: @colour-dark-grey;
+      color: @colour-white;
+      border-bottom: 1px solid @colour-dark-grey;
+    }
+
+    &.local {
+      .mixin-chunky-link;
+      padding: 4px;
+
+      &:hover,
+      &:active {
+        border: none;
+      }
+    }
+  }
+}
+
+.js #content-section {
+  box-shadow: inset 0 3px 15px -10px @colour-near-black;
+  -webkit-box-shadow: inset 0 3px 15px -7px @colour-near-black;
+}
+
+.no-box-shadow #content-section {
+  border-top: 2px solid @colour-pale-grey;
+  border-bottom: 2px solid @colour-pale-grey;
+}
+
+.no-js > #content-section .section,
+.no-js > #menu {
+  border-bottom: 4px solid @colour-pale-grey;
+}
+
+.no-box-shadow #content-section a.permalink {
+  border-right: 1px solid @colour-pale-grey;
+  border-bottom: 1px solid @colour-pale-grey;
+}
+
+.back-to-top {
+  text-align: right;
+
+  a {
+    font-family: @font-family-heading;
+    font-weight: @font-weight-bold;
+    display: inline-block;
+    border: 0;
+    background-color: @colour-pale-grey;
+    color: @colour-near-black;
+    text-decoration: none;
+    font-size: @font-size-small;
+    text-transform: uppercase;
+    padding: 0 6px;
+
+    &:hover,
+    &:active {
+      background-color: @colour-dark-grey;
+      color: @colour-white;
+      border: 0;
+    }
+  }
+}
+
+
+// ---------- Permalinks ----------
+
+.permalink-container {
+	display: inline-block;
+	float: right;
+	margin-top: @margin-1-unit;
+
+	.permalink {
+		display: inline-block;
+		background-color: transparent;
+		color: @colour-mid-grey;
+		border: 0 !important;
+		padding: 3px 6px;
+		font-size: @font-size-small;
+		text-transform: lowercase;
+
+		.mixin-drop-shadow;
+
+		&:hover,
+		&:active {
+			background-color: @colour-dark-grey;
+			color: @colour-white;
+		}
+	}
+}
+
+
+// ---------- Images ----------
+
+img {
+  &.right {
+    float: right;
+    margin: 0 0 @margin-half-unit @margin-2-units;
+  }
+
+  &.left {
+    float: left;
+    margin: 0 @margin-2-units @margin-half-unit 0;
+  }
+}
+
+#android-logo {
+  display: block;
+  float: right;
+  width: 80px;
+  height: 94px;
+  margin: 0 0 @margin-1-unit @margin-1-unit;
+  background: url(/images/android-robot-outlined.png) no-repeat;
+	background-size: 80px 94px;
+}
+
+
+// ---------- Gallery ----------
+
+.gallery {
+  display: block;
+  width: 240px;
+  height: 160px;
+  float: right;
+  padding: 0;
+  color: @colour-white;
+  cursor: pointer;
+  border: 2px solid @colour-mid-grey;
+  margin: @margin-half-unit 0 @margin-2-units @margin-2-units;
+  background: no-repeat top left;
+  -moz-transition: box-shadow 0.2s;
+  -webkit-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    margin: 3px 2px 22px 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    margin: 0 !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .title {
+    font-family: @font-family-heading;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-h2;
+    background-color: rgba(246, 139, 31, 0.9);
+    padding: @margin-2-units @margin-half-unit 2px @margin-half-unit;
+  }
+
+  .subtitle {
+    font-size: @font-size-h3;
+    text-transform: uppercase;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 2px @margin-half-unit;
+  }
+
+}
+body.no-rgba .gallery {
+  .title {
+    background-color: @colour-orange;
+  }
+
+  .subtitle {
+    background-color: @colour-dark-grey;
+  }
+}
+
+#book-reader-gallery {
+  background-image: url(/images/bookreader/bg.png);
+}
+
+
+// ---------- Nutshell ----------
+
+#nutshell {
+  .subsection {
+    margin: @margin-3-units @margin-2-units @margin-4-unit @margin-2-units;
+    padding-left: 100px;
+		background-repeat: no-repeat;
+		background-size: 80px 80px;
+  }
+
+  #nutshell-no-agents {
+    background-image: url(/images/no-agents.png);
+  }
+
+  #nutshell-no-risk {
+		background-image: url(/images/no-risk.png);
+  }
+
+  #nutshell-flexible {
+		background-image: url(/images/flexible.png);
+  }
+}
+
+
+// ---------- About ----------
+
+#about {
+	#mark-photo {
+		float: right;
+		border: @margin-1-unit solid @colour-white;
+		width: 180px;
+		height: 270px;
+		margin: @margin-4-unit 0 @margin-2-units @margin-4-unit;
+		background-image: url(/images/markwhitaker.jpg);
+		background-size: 180px 270px;
+	}
+}
+
+
+// ---------- Contact ----------
+
+#get-in-touch {
+	margin-bottom: @margin-2-units;
+
+	p {
+		margin-top: 0.5em;
+		position: relative;
+		line-height: @line-height-compressed;
+	}
+
+	#email-address {
+		font-size: @font-size-h2;
+	}
+
+	.fa {
+		color: @colour-near-black;
+	}
+}
+
+
+// ---------- Testimonials ----------
+
+#testimonials {
+  .subsection {
+	  .mixin-drop-shadow;
+    position: relative;
+    background-color: @colour-white;
+    margin-top: 20px;
+    padding: @margin-2-units @margin-2-units @margin-2-units @margin-7-unit;
+
+    .author {
+      font-size: @font-size-small;
+      font-weight: @font-weight-bold;
+      text-transform: uppercase;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: @margin-2-units;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: @margin-2-units;
+    }
+
+    &:before,
+    &:after {
+			//noinspection CssNoGenericFontName
+			font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: @font-size-giant;
+      position: absolute;
+      color: @colour-near-white;
+    }
+
+    &:before {
+      content: "\f10d";
+      top: @margin-2-units;
+      left: @margin-2-units;
+    }
+
+    &:after {
+      content: "\f10e";
+      bottom: @margin-1-unit;
+      right: @margin-2-units;
+    }
+  }
+}
+
+
+// ---------- Footer ----------
+
+#footer {
+  padding-top: @margin-1-unit;
+  color: @colour-mid-grey;
+  clear: both;
+
+  p {
+    font-size: @font-size-small;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: @colour-mid-grey;
+    border-bottom: 1px dotted @colour-mid-grey;
+  }
+  a:hover,
+  a:active {
+    color: @colour-black;
+    border-bottom-color: @colour-black;
+  }
+
+  #footer-left {
+    float: left;
+  }
+
+  #footer-right {
+    float: right;
+    text-align: right;
+  }
+
+  #footer-left,
+  #footer-right {
+    padding-bottom: @margin-5-unit;
+  }
+
+  &.long {
+    #footer-left,
+    #footer-right {
+      padding-bottom: 500px;
+    }
+  }
+}
+
+
+// ---------- Media queries ----------
+
+// Hi-DPI displays
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  #masthead {
+		.row {
+			background-image: url(/images/logo@2x.png);
+		}
+	}
+
+  #header {
+		#title {
+			background-image: url(/images/header-bg@2x.png);
+		}
+	}
+
+  #content-section {
+    background-image: url(/images/bg@2x.png);
+  }
+
+  #nutshell {
+		#nutshell-no-agents {
+			background-image: url(/images/no-agents@2x.png);
+		}
+
+		#nutshell-no-risk {
+			background-image: url(/images/no-risk@2x.png);
+		}
+
+		#nutshell-flexible {
+			background-image: url(/images/flexible@2x.png);
+		}
+	}
+
+  #android-logo {
+    background-image: url(/images/android-robot-outlined-x2.png);
+  }
+}
+
+// Mobile devices
+@media (max-width: 700px) {
+
+	#content-section {
+		p,
+		ul {
+			text-align: left;
+		}
+	}
+
+	.desktop-only {
+		display: none;
+	}
+
+	#masthead #phone-number,
+  #menu .section {
+    display: none;
+  }
+
+  #header {
+    #title {
+      margin: @margin-1-unit 0 @margin-2-units 0;
+      height: 280px;
+      background-image: url(/images/header-bg-small.png);
+      background-size: 300px 233px;
+			background-position: bottom right;
+
+      h1 {
+        padding-top: @margin-2-units;
+				max-width: 80%;
+      }
+    }
+  }
+
+  #nav {
+    float: none;
+    width: 100%;
+
+    p {
+      margin-top: 0;
+      display: inline;
+    }
+  }
+
+	.permalink-container {
+		display: none;
+	}
+
+	#nutshell {
+		.subsection {
+			margin: @margin-2-units 0;
+			padding-left: @margin-5-unit;
+			background-size: 40px 40px;
+		}
+	}
+
+	#about {
+		#mark-photo {
+			border-width: @margin-half-unit;
+			width: 90px;
+			height: 135px;
+			margin: 0 0 @margin-1-unit @margin-1-unit;
+			background-size: 90px 135px;
+		}
+	}
+
+	#footer {
+		#footer-left,
+		#footer-right {
+			float: none;
+			text-align: left;
+		}
+		#footer-left {
+			padding-bottom: 0;
+		}
+	}
+}
+
+// Hi-DPI mobile devices
+@media
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 700px),
+(min-resolution: 192dpi)and (max-width: 700px) {
+	#header {
+		#title {
+			background-image: url(/images/header-bg-small@2x.png);
+		}
+	}
+}
