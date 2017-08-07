@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b89ffa03-d9a0-418a-bca9-96ed536716b1" name="mainwave.co.uk" url="http://www.mainwave.co.uk">
+        <fileTransfer host="bitrot.net" port="21" rootFolder="/mainwave.co.uk">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="2d6b91d2-4170-4ed5-9635-03981daa6094" name="dev.mainwave.co.uk" url="http://www.mainwave.co.uk">
+        <fileTransfer host="bitrot.net" port="21" rootFolder="/dev.mainwave.co.uk">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
