@@ -2,17 +2,17 @@ $(document).ready(function(){
 
 	// ----- VARIABLES -----
 
-    var $body = $('body');
-    var $navPanel = $('#nav');
-    var $contentSection = $('#content-section');
-    var $contentSections = $contentSection.find('.section');
-    var $backToTopLinks = $('.back-to-top');
-    var $footer = $('#footer');
-    var $permalinkTemplate = $('.template.permalink-container')
-	    .detach()
-	    .removeClass('template');
+	var $body = $('body');
+	var $navPanel = $('#nav');
+	var $contentSection = $('#content-section');
+	var $contentSections = $contentSection.find('.section');
+	var $backToTopLinks = $('.back-to-top');
+	var $footer = $('#footer');
+	var $permalinkTemplate = $('.template.permalink-container')
+		.detach()
+		.removeClass('template');
 
-    // ----- FUNCTIONS -----
+	// ----- FUNCTIONS -----
 
 	function showSection(section)
 	{
@@ -150,4 +150,6 @@ $(document).ready(function(){
 	$('#email-address').html(
 		'<a href="mailto:' + address + '">' + address + '</a>'
 	);
+
+	$('#copyright-year').text(new Date().getFullYear());
 });
