@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="dev.mainwave.co.uk" uploadOnCheckin="b89ffa03-d9a0-418a-bca9-96ed536716b1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;Utility images;*.less;README.md">
+  <component name="PublishConfigData" autoUpload="Always" serverName="dev.mainwave.co.uk" uploadOnCheckin="b89ffa03-d9a0-418a-bca9-96ed536716b1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;Utility images;*.less;README.md">
     <serverData>
       <paths name="dev.mainwave.co.uk">
         <serverdata>
@@ -26,5 +26,6 @@
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="mainwave.co.uk" />
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
