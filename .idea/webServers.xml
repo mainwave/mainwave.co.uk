@@ -10,7 +10,7 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
-      <webServer id="2d6b91d2-4170-4ed5-9635-03981daa6094" name="dev.mainwave.co.uk" url="http://www.mainwave.co.uk">
+      <webServer id="2d6b91d2-4170-4ed5-9635-03981daa6094" name="dev.mainwave.co.uk" url="http://dev.mainwave.co.uk">
         <fileTransfer host="bitrot.net" port="21" rootFolder="/dev.mainwave.co.uk">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
