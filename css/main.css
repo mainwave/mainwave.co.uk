@@ -483,7 +483,7 @@ body.no-rgba .gallery .subtitle {
     background-image: url(/images/flexible@2x.png);
   }
   #android-logo {
-    background-image: url(/images/android-robot-outlined-x2.png);
+    background-image: url(/images/android-robot-outlined@2x.png);
   }
 }
 @media (max-width: 700px) {
