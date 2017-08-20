@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="dev.mainwave.co.uk" uploadOnCheckin="b89ffa03-d9a0-418a-bca9-96ed536716b1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;Utility images;*.less;README.md">
+  <component name="PublishConfigData" autoUpload="Always" serverName="dev.mainwave.co.uk" deleteMissingItems="true" uploadOnCheckin="b89ffa03-d9a0-418a-bca9-96ed536716b1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;Utility images;*.less;README.md;.gitignore">
     <serverData>
       <paths name="dev.mainwave.co.uk">
         <serverdata>
