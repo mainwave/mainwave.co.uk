@@ -141,6 +141,7 @@ $(document).ready(function(){
 
 	showSection(window.location.hash);
 
+	// Link the email address
 	var address = $emailAddress.text();
 	$emailAddress.html(
 		'<a href="mailto:'+address+'">'+address+'</a>'
