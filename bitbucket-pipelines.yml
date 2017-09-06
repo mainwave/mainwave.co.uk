@@ -6,7 +6,14 @@
 # image: docker-image:tag
 
 pipelines:
-  default:
-    - step:
-        script:
-          - echo "Everything is awesome!"
+    default:
+      - step:
+          script:
+            - echo "Pipeline Init"
+            - apt-get update
+            - apt-get -qq install git-ftp
+            - echo "'_$(git status -uno --porcelain | wc -l)_'"
+            - git status -uno --porcelain
+            - echo "Initiating push site:Source."
+            - git config git-ftp.syncroot Source/
+            - git ftp init --user $FTP_USER --passwd $FTP_PASSWORD ftp://$FTP_SERVER/mainwave.co.uk
