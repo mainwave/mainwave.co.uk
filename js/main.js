@@ -8,6 +8,7 @@ $(document).ready(function(){
 	var $contentSections = $contentSection.find('.section');
 	var $backToTopLinks = $('.back-to-top');
 	var $footer = $('#footer');
+	var $emailAddress = $('#email-address');
 	var $permalinkTemplate = $('.template.permalink-container')
 		.detach()
 		.removeClass('template');
@@ -84,17 +85,17 @@ $(document).ready(function(){
 	$('#book-reader-gallery').click(function()
 	{
 		$.slimbox([
-			['/images/bookreader/01.png','Bookshelf view'],
-			['/images/bookreader/02.png','Table of contents in portrait orientation'],
-			['/images/bookreader/03.png','Search results view'],
-			['/images/bookreader/04.png','Adding a bookmark'],
-			['/images/bookreader/05.png','Bookmarks view'],
-			['/images/bookreader/06.png','Sticky note shown in default "collapsed" mode'],
-			['/images/bookreader/07.png','Sticky note shown in detail mode'],
-			['/images/bookreader/08.png','Adding a weblink'],
-			['/images/bookreader/09.png','Weblink shown in detail mode'],
-			['/images/bookreader/10.png','Multi-colour highlights, both single-line and rectangle'],
-			['/images/bookreader/11.png','Deleting a highlight']
+			['images/bookreader/01.png','Bookshelf view'],
+			['images/bookreader/02.png','Table of contents in portrait orientation'],
+			['images/bookreader/03.png','Search results view'],
+			['images/bookreader/04.png','Adding a bookmark'],
+			['images/bookreader/05.png','Bookmarks view'],
+			['images/bookreader/06.png','Sticky note shown in default "collapsed" mode'],
+			['images/bookreader/07.png','Sticky note shown in detail mode'],
+			['images/bookreader/08.png','Adding a weblink'],
+			['images/bookreader/09.png','Weblink shown in detail mode'],
+			['images/bookreader/10.png','Multi-colour highlights, both single-line and rectangle'],
+			['images/bookreader/11.png','Deleting a highlight']
 		],
 		0,
 		{loop: false});
@@ -140,15 +141,9 @@ $(document).ready(function(){
 
 	showSection(window.location.hash);
 
-	var address =
-		'hello' +
-		String.fromCharCode(64) +
-		'mainwave.' +
-		'co.' +
-		'uk';
-
-	$('#email-address').html(
-		'<a href="mailto:' + address + '">' + address + '</a>'
+	var address = $emailAddress.text();
+	$emailAddress.html(
+		'<a href="mailto:'+address+'">'+address+'</a>'
 	);
 
 	$('#copyright-year').text(new Date().getFullYear());

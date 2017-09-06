@@ -69,7 +69,7 @@ h6 {
 }
 #masthead .row {
   height: 80px;
-  background: url(/images/logo.png) no-repeat 100% 35px;
+  background: url(../images/logo.png) no-repeat 100% 35px;
   background-size: 171px 22px;
   padding-top: 20px;
   font-size: 23px;
@@ -83,7 +83,7 @@ h6 {
   margin-top: -20px;
   margin-bottom: 30px;
   height: 260px;
-  background: url(/images/header-bg.png) no-repeat top right;
+  background: url(../images/header-bg.png) no-repeat top right;
   background-size: 800px 260px;
 }
 #header #title h1 {
@@ -155,7 +155,7 @@ h6 {
 }
 #content-section {
   padding: 25px 0;
-  background: #eee url(/images/bg.png) repeat;
+  background: #eee url(../images/bg.png) repeat;
   background-size: 20px 20px;
   clear: both;
 }
@@ -302,7 +302,7 @@ img.left {
   width: 80px;
   height: 94px;
   margin: 0 0 10px 10px;
-  background: url(/images/android-robot-outlined.png) no-repeat;
+  background: url(../images/android-robot-outlined.png) no-repeat;
   background-size: 80px 94px;
 }
 .gallery {
@@ -350,7 +350,7 @@ body.no-rgba .gallery .subtitle {
   background-color: #666;
 }
 #book-reader-gallery {
-  background-image: url(/images/bookreader/bg.png);
+  background-image: url(../images/bookreader/bg.png);
 }
 #nutshell .subsection {
   margin: 30px 20px 40px 20px;
@@ -359,13 +359,13 @@ body.no-rgba .gallery .subtitle {
   background-size: 80px 80px;
 }
 #nutshell #nutshell-no-agents {
-  background-image: url(/images/no-agents.png);
+  background-image: url(../images/no-agents.png);
 }
 #nutshell #nutshell-no-risk {
-  background-image: url(/images/no-risk.png);
+  background-image: url(../images/no-risk.png);
 }
 #nutshell #nutshell-flexible {
-  background-image: url(/images/flexible.png);
+  background-image: url(../images/flexible.png);
 }
 #about #mark-photo {
   float: right;
@@ -373,7 +373,7 @@ body.no-rgba .gallery .subtitle {
   width: 180px;
   height: 270px;
   margin: 40px 0 20px 40px;
-  background-image: url(/images/markwhitaker.jpg);
+  background-image: url(../images/markwhitaker.jpg);
   background-size: 180px 270px;
 }
 #get-in-touch {
@@ -465,25 +465,25 @@ body.no-rgba .gallery .subtitle {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #masthead .row {
-    background-image: url(/images/logo@2x.png);
+    background-image: url(../images/logo@2x.png);
   }
   #header #title {
-    background-image: url(/images/header-bg@2x.png);
+    background-image: url(../images/header-bg@2x.png);
   }
   #content-section {
-    background-image: url(/images/bg@2x.png);
+    background-image: url(../images/bg@2x.png);
   }
   #nutshell #nutshell-no-agents {
-    background-image: url(/images/no-agents@2x.png);
+    background-image: url(../images/no-agents@2x.png);
   }
   #nutshell #nutshell-no-risk {
-    background-image: url(/images/no-risk@2x.png);
+    background-image: url(../images/no-risk@2x.png);
   }
   #nutshell #nutshell-flexible {
-    background-image: url(/images/flexible@2x.png);
+    background-image: url(../images/flexible@2x.png);
   }
   #android-logo {
-    background-image: url(/images/android-robot-outlined@2x.png);
+    background-image: url(../images/android-robot-outlined@2x.png);
   }
 }
 @media (max-width: 700px) {
@@ -501,7 +501,7 @@ body.no-rgba .gallery .subtitle {
   #header #title {
     margin: 10px 0 20px 0;
     height: 280px;
-    background-image: url(/images/header-bg-small.png);
+    background-image: url(../images/header-bg-small.png);
     background-size: 300px 233px;
     background-position: bottom right;
   }
@@ -543,6 +543,6 @@ body.no-rgba .gallery .subtitle {
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px), (min-resolution: 192dpi) and (max-width: 700px) {
   #header #title {
-    background-image: url(/images/header-bg-small@2x.png);
+    background-image: url(../images/header-bg-small@2x.png);
   }
 }
