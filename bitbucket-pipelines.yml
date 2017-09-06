@@ -16,4 +16,4 @@ pipelines:
             - git status -uno --porcelain
             - echo "Initiating push site:/"
             - git config git-ftp.syncroot /
-            - git ftp init --user $FTP_USER --passwd $FTP_PASSWORD ftp://$FTP_SERVER/mainwave.co.uk
+            - git ftp commit --user $FTP_USER --passwd $FTP_PASSWORD ftp://$FTP_SERVER/mainwave.co.uk
