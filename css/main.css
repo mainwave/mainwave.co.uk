@@ -403,31 +403,24 @@ body.no-rgba .gallery .subtitle {
   font-weight: 700;
   text-transform: uppercase;
 }
+#testimonials .subsection .quote {
+  position: absolute;
+  color: #eee;
+  font-size: 2em;
+}
+#testimonials .subsection .quote.quote-left {
+  top: 20px;
+  left: 20px;
+}
+#testimonials .subsection .quote.quote-right {
+  bottom: 10px;
+  right: 20px;
+}
 #testimonials .subsection:nth-of-type(odd) {
   margin-right: 20px;
 }
 #testimonials .subsection:nth-of-type(even) {
   margin-left: 20px;
-}
-#testimonials .subsection:before,
-#testimonials .subsection:after {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  font-size: 35px;
-  position: absolute;
-  color: #eee;
-}
-#testimonials .subsection:before {
-  content: "\f10d";
-  top: 20px;
-  left: 20px;
-}
-#testimonials .subsection:after {
-  content: "\f10e";
-  bottom: 10px;
-  right: 20px;
 }
 #footer {
   padding-top: 10px;

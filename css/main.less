@@ -548,36 +548,27 @@ body.no-rgba .gallery {
       text-transform: uppercase;
     }
 
+	  .quote {
+		  position: absolute;
+		  color: @colour-near-white;
+		  font-size: 2em;
+
+		  &.quote-left {
+			  top: @margin-2-units;
+			  left: @margin-2-units;
+		  }
+		  &.quote-right {
+			  bottom: @margin-1-unit;
+			  right: @margin-2-units;
+		  }
+	  }
+
     &:nth-of-type(odd) {
       margin-right: @margin-2-units;
     }
 
     &:nth-of-type(even) {
       margin-left: @margin-2-units;
-    }
-
-    &:before,
-    &:after {
-			//noinspection CssNoGenericFontName
-			font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: none;
-      font-size: @font-size-giant;
-      position: absolute;
-      color: @colour-near-white;
-    }
-
-    &:before {
-      content: "\f10d";
-      top: @margin-2-units;
-      left: @margin-2-units;
-    }
-
-    &:after {
-      content: "\f10e";
-      bottom: @margin-1-unit;
-      right: @margin-2-units;
     }
   }
 }
