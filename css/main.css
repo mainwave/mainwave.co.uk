@@ -372,9 +372,12 @@ body.no-rgba .gallery .subtitle {
   border: 10px solid #fff;
   width: 250px;
   height: 250px;
-  margin: 40px 0 20px 40px;
+  margin: 20px 0 10px 20px;
   background-size: 250px 250px;
   background: url(../images/markwhitaker.jpg) no-repeat;
+  -webkit-border-radius: 250px;
+  -moz-border-radius: 250px;
+  border-radius: 250px;
 }
 #get-in-touch {
   margin-bottom: 20px;
@@ -523,8 +526,11 @@ body.no-rgba .gallery .subtitle {
     border-width: 5px;
     width: 125px;
     height: 125px;
-    margin: 0 0 10px 10px;
+    margin: 0 0 5px 5px;
     background-size: 125px 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
   }
   #footer #footer-left,
   #footer #footer-right {
